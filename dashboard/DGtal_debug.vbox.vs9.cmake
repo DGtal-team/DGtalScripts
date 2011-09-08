@@ -3,7 +3,7 @@ set(CTEST_SITE "liris.vbox.vs9")
 set(CTEST_CMAKE_GENERATOR "Visual Studio 9 2008")
 set(CTEST_BUILD_NAME "DGtal-debug.liris.vbox.vs9")
 set(CTEST_BUILD_CONFIGURATION Debug)
-SET(CTEST_BUILD_FLAGS -j10)
+
 
 SET(CTEST_GIT_COMMAND "C:/cygwin/bin/git.exe")
 

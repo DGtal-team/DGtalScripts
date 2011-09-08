@@ -3,7 +3,7 @@ set(CTEST_SITE "liris.vbox.nmake")
 set(CTEST_CMAKE_GENERATOR "NMake Makefiles")
 set(CTEST_BUILD_NAME "DGtal-debug.liris.vbox.nmake")
 set(CTEST_BUILD_CONFIGURATION Debug)
-SET(CTEST_BUILD_FLAGS -j10)
+#SET(CTEST_BUILD_FLAGS -j10)
 
 SET(CTEST_GIT_COMMAND "C:/cygwin/bin/git.exe")
 
