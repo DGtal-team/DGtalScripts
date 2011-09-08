@@ -14,7 +14,8 @@ dashboard
 
    (note that this command can be inserted in a "crontab").
 
-    We encourage you to create new scripts on your systems to test a wider class of compiler/systems.
+    We encourage you to create new scripts on your system to test and report a wider class 
+    of compiler/systems.
  
 
 dev
