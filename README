@@ -1,4 +1,4 @@
-This repository contains scripts to help DGtal developpers.
+This repository contains scripts to help DGtal developers.
 
 dashboard
 =========
@@ -22,7 +22,7 @@ dev
 ===
 
    Scripts and models to create a DGtal class, a DGtal template class, a documentation,....
-   You need to specify to environnemnt variables:
+   You need to specify to environment variables (e.g. in your .bashrc or .profile):
      - ${DGtal}: path to your clone of the DGtal source repository
      - ${DGtalScripts}: path to your clone of the DGtalScripts repository
 
