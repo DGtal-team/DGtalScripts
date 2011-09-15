@@ -22,5 +22,11 @@ dev
 ===
 
    Scripts and models to create a DGtal class, a DGtal template class, a documentation,....
+   You need to specify to environnemnt variables:
+     - ${DGtal}: path to your clone of the DGtal source repository
+     - ${DGtalScripts}: path to your clone of the DGtalScripts repository
+
+   Then, you can add ${DGtalScripts$}/dev/script to your $PATH variable.
+
     
    
