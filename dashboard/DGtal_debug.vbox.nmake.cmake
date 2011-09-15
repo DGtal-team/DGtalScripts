@@ -19,6 +19,10 @@ set(dashboard_git_branch master)
 set(dashboard_root_name   "Dashboard/MyTests/DGtal/${CTEST_BUILD_NAME}")
 
 SET(dashboard_cache "
+
+//Shared lib option
+BUILD_SHARED_LIBS:BOOL=OFF
+
 //Path to a file.
 Boost_INCLUDE_DIR:PATH=C:/Program Files/boost/boost_1_47
 

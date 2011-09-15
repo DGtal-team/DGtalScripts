@@ -4,10 +4,14 @@ if ! test -d "${DGtal}"; then
     echo "[$0] Environment variable DGtal is undefined."
     exit 1
 fi
+if ! test -d "${DGtalScripts}"; then
+    echo "[$0] Environment variable DGtalScripts is undefined."
+    exit 1
+fi
 
 # setting directories
-MODELS_DIR=${DGtal}/dev/models
-PROFILES_DIR=${DGtal}/dev/profiles
+MODELS_DIR=${DGtalScripts}/dev/models
+PROFILES_DIR=${DGtalScripts}/dev/profiles
 INCLUDE_DIR=${DGtal}/src/DGtal
 SRC_DIR=${DGtal}/src/DGtal
 TESTS_DIR=${DGtal}/tests

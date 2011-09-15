@@ -1,10 +1,10 @@
 #!/bin/bash
 
-if ! test -d "${DGtal}"; then
-    echo "Environment variable DGtal is undefined."
+if ! test -d "${DGtalScripts}"; then
+    echo "Environment variable DGtalScripts is undefined."
     exit 1
 fi
-SCRIPTS_DIR=${DGtal}/dev/scripts
+SCRIPTS_DIR=${DGtalScripts}/dev/scripts
 source ${SCRIPTS_DIR}/common.sh
 
 if test \( "$#" != "3" \) -a \( "$#" != "2" \);
