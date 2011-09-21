@@ -130,7 +130,9 @@ operator<< ( std::ostream & out, const XXX & object );
 
 ///////////////////////////////////////////////////////////////////////////////
 // Includes inline functions.
+#if !defined(BUILD_INLINE)
 #include "YYY/ZZZ/XXX.ih"
+#endif
 
 
 //                                                                           //
