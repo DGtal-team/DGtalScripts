@@ -1,7 +1,7 @@
 #  dcoeurjo
 set(CTEST_SITE "liris.vbox.nmake")
 set(CTEST_CMAKE_GENERATOR "NMake Makefiles")
-set(CTEST_BUILD_NAME "DGtal-debug.liris.vbox.nmake")
+set(CTEST_BUILD_NAME "DGtal-release.liris.vbox.nmake")
 set(CTEST_BUILD_CONFIGURATION Release)
 
 
