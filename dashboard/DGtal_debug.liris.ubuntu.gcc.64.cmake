@@ -1,5 +1,5 @@
 #  dcoeurjo
-set(CTEST_SITE "liris.ubuntu.gcc.64")
+set(CTEST_SITE "liris.ubuntu.64")
 set(CTEST_CMAKE_GENERATOR "Unix Makefiles")
 set(CTEST_BUILD_NAME "DGtal-debug.ubuntu.gcc.64")
 set(CTEST_BUILD_CONFIGURATION Debug)

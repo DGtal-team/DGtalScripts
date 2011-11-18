@@ -1,5 +1,5 @@
 #   # Client maintainer: me@mydomain.net
-set(CTEST_SITE "liris.ubuntu.gcc.64")
+set(CTEST_SITE "liris.ubuntu.64")
 set(CTEST_CMAKE_GENERATOR "Unix Makefiles")
 set(CTEST_BUILD_NAME "DGtal-debug-all.ubuntu.clang++.64")
 set(CTEST_BUILD_CONFIGURATION Debug)
@@ -8,12 +8,9 @@ SET(CTEST_BUILD_FLAGS -j10)
 
 
 
-find_program(CTEST_COVERAGE_COMMAND NAMES gcov)
-find_program(CTEST_MEMORYCHECK_COMMAND NAMES valgrind)
 
-
-SET(dashboard_do_coverage true)
-SET(dashboard_do_memcheck true)
+SET(dashboard_do_coverage false)
+SET(dashboard_do_memcheck false)
 set(dashboard_git_url "git://github.com/DGtal-team/DGtal.git")
 set(dashboard_git_branch master)
 set(dashboard_root_name   "dashboard/MyTests/DGtal//${CTEST_BUILD_NAME}")
