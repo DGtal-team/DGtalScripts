@@ -11,7 +11,7 @@ find_program(CTEST_MEMORYCHECK_COMMAND NAMES valgrind)
 
 
 SET(dashboard_do_coverage false)
-SET(dashboard_do_memcheck true)
+SET(dashboard_do_memcheck false)
 set(dashboard_git_url "git://github.com/DGtal-team/DGtal.git")
 set(dashboard_git_branch master)
 set(dashboard_root_name   "dashboard/MyTests/DGtal/${CTEST_BUILD_NAME}")

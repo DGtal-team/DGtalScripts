@@ -18,6 +18,7 @@ SET(dashboard_cache "
 //CXX compiler.
 CMAKE_CXX_COMPILER:FILEPATH=/usr/bin/g++-4.4
 
+//With All
 WITH_ALL:BOOL=OFF
 //With CairoGraphics.
 WITH_CAIRO:BOOL=OFF
