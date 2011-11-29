@@ -1,7 +1,7 @@
 #   # Client maintainer: me@mydomain.net
 set(CTEST_SITE "liris.ubuntu.64")
 set(CTEST_CMAKE_GENERATOR "Unix Makefiles")
-set(CTEST_BUILD_NAME "DGtal-release_all.ubuntu.clang++.64")
+set(CTEST_BUILD_NAME "Release_all.clang++")
 set(CTEST_BUILD_CONFIGURATION Release)
 SET(CTEST_BUILD_FLAGS -j10)
 

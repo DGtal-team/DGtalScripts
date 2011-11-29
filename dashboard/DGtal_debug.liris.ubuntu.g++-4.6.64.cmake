@@ -1,7 +1,7 @@
 #  dcoeurjo
 set(CTEST_SITE "liris.ubuntu.64")
 set(CTEST_CMAKE_GENERATOR "Unix Makefiles")
-set(CTEST_BUILD_NAME "DGtal-debug.ubuntu.g++-4.6.64")
+set(CTEST_BUILD_NAME "Debug.g++-4.6")
 set(CTEST_BUILD_CONFIGURATION Debug)
 SET(CTEST_BUILD_FLAGS -j10)
 
