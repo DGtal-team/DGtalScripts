@@ -1,7 +1,7 @@
 # mtola
-set(CTEST_SITE "liris.vmware.nmake")
+set(CTEST_SITE "liris.vmware.Win7")
 set(CTEST_CMAKE_GENERATOR "NMake Makefiles")
-set(CTEST_BUILD_NAME "DGtal-release-VS2008-32bits.liris.vmware-Seven64bits.nmake")
+set(CTEST_BUILD_NAME "Release-VS2008-32bits")
 set(CTEST_BUILD_CONFIGURATION Release)
 
 SET(CTEST_GIT_COMMAND "C:/Program Files (x86)/Git/bin/git.exe")
