@@ -2,7 +2,7 @@
 set(CTEST_SITE "liris.ubuntu.64")
 set(CTEST_CMAKE_GENERATOR "Unix Makefiles")
 set(CTEST_BUILD_NAME "Debug.g++-4.4")
-set(CTEST_BUILD_CONFIGURATION Debug)
+set(CTEST_BUILD_CONFIGURATION "Debug")
 SET(CTEST_BUILD_FLAGS -j10)
 
 
