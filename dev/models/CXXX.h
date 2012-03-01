@@ -100,7 +100,11 @@ namespace YYY
      @tparam T the type that should be a model of XXX.
    */
   template <typename T> 
-  struct XXX // : CoarserConcept<T>
+  struct XXX 
+  // Use derivation for coarser concepts, like
+  // : CoarserConcept<T>
+  // Think to boost::CopyConstructible<T>, boost::DefaultConstructible<T>, ...
+  // http://www.boost.org/doc/libs/1_49_0/libs/concept_check/reference.htm
   {
     // ----------------------- Concept checks ------------------------------
   public:
@@ -115,14 +119,22 @@ namespace YYY
     {
       // Static members of type A can be tested with
       ConceptUtils::sameType( myA, T::staticMember );
-      // Method dummy should take parameter myA of type A and return
+      // non-const method dummy should take parameter myA of type A and return
       // something of type B
       ConceptUtils::sameType( myB, myX.dummy( myA ) );
       // look at CInteger.h for testing tags.
+      // check const methods.
+      checkConstConstraints();
+    }
+    void checkConstConstraints() const
+    {
+      // const method dummyConst should take parameter myA of type A and return
+      // something of type B
+      ConceptUtils::sameType( myB, myX.dummyConst( myA ) );
     }
     // ------------------------- Private Datas --------------------------------
   private:
-    T myX; // only if T is default constructible.
+    T myX; // do not require T to be default constructible.
     A myA;
     B myB;
     
