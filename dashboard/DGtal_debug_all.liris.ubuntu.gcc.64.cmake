@@ -7,7 +7,6 @@ SET(CTEST_BUILD_FLAGS -j10)
 
 
 
-
 find_program(CTEST_COVERAGE_COMMAND NAMES gcov)
 find_program(CTEST_MEMORYCHECK_COMMAND NAMES valgrind)
 
