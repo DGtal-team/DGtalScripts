@@ -10,7 +10,7 @@
  * This file is part of the DGtal library.
  */
 
-/* 
+/*
  * Useful to avoid writing DGtal:: in front of every class.
  * Do not forget to add an entry in src/DGtal/base/Config.h.in !
  */
@@ -19,13 +19,7 @@ namespace DGtal {
 /*!
 @page XXX Documentation for XXX
 @writers AUTHOR
-
-Table of contents:
- -# \ref sectXXX1
-   -# \ref subsectXXX11
- -# \ref sectXXX2  
-   -# \ref subsectXXX21
-   -# \ref subsectXXX22
+[TOC]
 
 \section sectXXX1 First Section
 
