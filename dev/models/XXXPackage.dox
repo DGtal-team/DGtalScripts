@@ -26,7 +26,7 @@
  * This file is part of the DGtal library.
  */
 
-/* 
+/*
  * Useful to avoid writing DGtal:: in front of every class.
  * Do not forget to add an entry in src/DGtal/base/Config.h.in !
  */
@@ -34,7 +34,7 @@ namespace DGtal {
 //----------------------------------------
 /*!
 @page XXXPackage  XXX package
-   
+
 @author AUTHOR
 @author AUTHOR
 @author AUTHOR
@@ -46,18 +46,21 @@ namespace DGtal {
 
 ....Package short Description......
 
-
 @b Modules
- - \ref moduleXXX1
- - \ref moduleXXX2  
- - \ref moduleXXX3
 
+- \ref moduleXXX1
+- \ref moduleXXX2
+- \ref moduleXXX3
 
- @b Package @b Concepts @b Overview
+@b Package @b Concepts @b Overview
+
+- XXXPackageConcepts
+
+@b Package @b Concepts @b Overview
  - \ref xxxPackageConcepts
 
 
- @b Related @b documentation @b pages
+@b Related @b documentation @b pages
  - \ref PageRef
 
 
