@@ -1,8 +1,8 @@
 #  dcoeurjo
 set(CTEST_SITE "liris.macosX")
 set(CTEST_CMAKE_GENERATOR "Unix Makefiles")
-set(CTEST_BUILD_NAME "Release.defaultGCC")
-set(CTEST_BUILD_CONFIGURATION "Release")
+set(CTEST_BUILD_NAME "Debug.defaultGCC")
+set(CTEST_BUILD_CONFIGURATION "Debug")
 SET(CTEST_BUILD_FLAGS -j10)
 
 
