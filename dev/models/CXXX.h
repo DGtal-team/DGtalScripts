@@ -47,102 +47,83 @@
 namespace YYY
 {
 
-  /////////////////////////////////////////////////////////////////////////////
-  // class XXX
-  /**
-     Description of \b concept '\b XXX' <p>
-     @ingroup Concepts
-     @brief Aim:
-     
-     <p> Refinement of
-    
-     <p> Associated types :
-    
-     <p> Notation
-     - \t X : A type that is a model of XXX
-     - \t x, \t y : object of type X
-    
-     <p> Definitions
-    
-     <p> Valid expressions and semantics <br>
-     <table> 
-      <tr> 
-        <td class=CName> \b Name </td> 
-        <td class=CExpression> \b Expression </td>
-        <td class=CRequirements> \b Type requirements </td> 
-        <td class=CReturnType> \b Return type </td>
-        <td class=CPrecondition> \b Precondition </td> 
-        <td class=CSemantics> \b Semantics </td> 
-        <td class=CPostCondition> \b Postcondition </td> 
-        <td class=CComplexity> \b Complexity </td>
-      </tr>
-      <tr> 
-        <td class=CName>            </td> 
-        <td class=CExpression>      </td>
-        <td class=CRequirements>    </td> 
-        <td class=CReturnType>      </td>
-        <td class=CPrecondition>    </td> 
-        <td class=CSemantics>       </td> 
-        <td class=CPostCondition>   </td> 
-        <td class=CComplexity>      </td>
-      </tr>
-    
-     </table>
-    
-     <p> Invariants <br>
-    
-     <p> Models <br>
+/////////////////////////////////////////////////////////////////////////////
+// class XXX
+/**
+Description of \b concept '\b XXX' <p>
+@ingroup Concepts
+@brief Aim:
 
-     A dummy model (for concept checking) is CXXXArchetype.
+### Refinement of
 
-     <p> Notes <br>
+### Associated types :
 
-     @tparam T the type that should be a model of XXX.
-   */
-  template <typename T> 
-  struct XXX 
-  // Use derivation for coarser concepts, like
-  // : CoarserConcept<T>
-  // Think to boost::CopyConstructible<T>, boost::DefaultConstructible<T>, ...
-  // http://www.boost.org/doc/libs/1_49_0/libs/concept_check/reference.htm
-  {
+### Notation
+ - \e X : A type that is a model of XXX
+ - \e x, \e y : object of type X
+
+### Definitions
+
+### Valid expressions and semantics
+
+| Name  | Expression | Type requirements | Return type   | Precondition | Semantics | Post condition | Complexity |
+|-------|------------|-------------------|---------------|--------------|-----------|----------------|------------|
+|       |            |                   |               |              |           |                |            |
+
+### Invariants
+
+### Models
+
+   A dummy model (for concept checking) is CXXXArchetype.
+
+### Notes
+
+@tparam T the type that should be a model of XXX.
+ */
+template <typename T>
+struct XXX
+            // Use derivation for coarser concepts, like
+            // : CoarserConcept<T>
+            // Think to boost::CopyConstructible<T>, boost::DefaultConstructible<T>, ...
+            // http://www.boost.org/doc/libs/1_49_0/libs/concept_check/reference.htm
+{
     // ----------------------- Concept checks ------------------------------
-  public:
+public:
     // 1. define first provided types (i.e. inner types), like
     typedef typename T::InnerType InnerType;
     // possibly check these types so as to satisfy a concept with
     BOOST_CONCEPT_ASSERT(( CConcept< InnerType > ));
     // To test if two types A and Y are equals, use
-    BOOST_STATIC_ASSERT(( ConceptUtils::SameType<A,X>::value ));    
+    BOOST_STATIC_ASSERT(( ConceptUtils::SameType<A,X>::value ));
     // 2. then check the presence of data members, operators and methods with
     BOOST_CONCEPT_USAGE( XXX )
     {
-      // Static members of type A can be tested with
-      ConceptUtils::sameType( myA, T::staticMember );
-      // non-const method dummy should take parameter myA of type A and return
-      // something of type B
-      ConceptUtils::sameType( myB, myX.dummy( myA ) );
-      // look at CInteger.h for testing tags.
-      // check const methods.
-      checkConstConstraints();
+        // Static members of type A can be tested with
+        ConceptUtils::sameType( myA, T::staticMember );
+        // non-const method dummy should take parameter myA of type A and return
+        // something of type B
+        ConceptUtils::sameType( myB, myX.dummy( myA ) );
+        // look at CInteger.h for testing tags.
+        // check const methods.
+        checkConstConstraints();
     }
     void checkConstConstraints() const
     {
-      // const method dummyConst should take parameter myA of type A and return
-      // something of type B
-      ConceptUtils::sameType( myB, myX.dummyConst( myA ) );
+        // const method dummyConst should take parameter myA of type A and return
+        // something of type B
+        ConceptUtils::sameType( myB, myX.dummyConst( myA ) );
     }
     // ------------------------- Private Datas --------------------------------
-  private:
+private:
     T myX; // do not require T to be default constructible.
     A myA;
     B myB;
-    
+
     // ------------------------- Internals ------------------------------------
-  private:
-    
-  }; // end of concept XXX
-  
+private:
+
+}; // end of concept XXX
+
 } // namespace YYY
 
 //                                                                           //
