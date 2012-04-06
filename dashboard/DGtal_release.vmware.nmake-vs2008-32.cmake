@@ -21,22 +21,36 @@ SET(dashboard_cache "
 BUILD_SHARED_LIBS:BOOL=OFF
 
 // Boost root library directory
-BOOST_ROOT:FILEPATH=C:/dev32/libs/boost_1_48_0
+BOOST_ROOT:PATH=C:/dev32/libs/boost_1_48_0
+
+// Cairo
+CAIRO_INCLUDE_DIRS:PATH=C:/dev32/libs/cairo/include
+CAIRO_LIBRAIRIES:FILEPATH=C:/dev32/libs/cairo/lib/cairo.lib
+
+// QGLViewer
+QGLVIEWER_INCLUDE_DIR:PATH=C:/dev32/libs/libQGLViewer-2.3.11
+QGLVIEWER_LIBRARY_DEBUG:FILEPATH=C:/dev32/libs/libQGLViewer-2.3.11/QGLViewer/debug/QGLViewerd2.lib
+QGLVIEWER_LIBRARY_RELEASE:FILEPATH=C:/dev32/libs/libQGLViewer-2.3.11/QGLViewer/release/QGLViewer2.lib
+
+// Gmp-Mpir
+GMP_INCLUDE_DIR:PATH=C:/dev32/libs/gmp-mpir/Win32/Release
+GMP_LIBRARIES:FILEPATH=C:/dev32/libs/gmp-mpir/Win32/Release/mpir.lib
+GMPXX_LIBRARIES:FILEPATH=C:/dev32/libs/gmp-mpir/Win32/Release/mpir.lib
 
 BUILD_TESTING:BOOL=ON
 WITH_ALL:BOOL=OFF
 // With CairoGraphics.
-WITH_CAIRO:BOOL=OFF
+WITH_CAIRO:BOOL=ON
 // With COIN3D & SOQT for 3D visualization (Qt required).
 WITH_COIN3D-SOQT:BOOL=OFF
 // With Gnu Multiprecision Library (GMP).
-WITH_GMP:BOOL=OFF
+WITH_GMP:BOOL=ON
 // With Insight Toolkit ITK.
 WITH_ITK:BOOL=OFF
 // With GraphicsMagick++.
 WITH_MAGICK:BOOL=OFF
 // With LibQGLViewer for 3D visualization (Qt required).
-WITH_QGLVIEWER:BOOL=OFF"
+WITH_QGLVIEWER:BOOL=ON"
 )
 
 include(${CTEST_SCRIPT_DIRECTORY}/cmake_common.cmake)
