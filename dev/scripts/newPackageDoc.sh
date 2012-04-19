@@ -10,7 +10,7 @@ source ${SCRIPTS_DIR}/common.sh
 
 if test  \( "$#" != "1" \);
 then 
-    echo "usage: $0 documenatation_name subdir" ;
+    echo "usage: $0 documentation_name" ;
     echo "       - creates a doxygen package documentation skeleton file (.dox) in the doc folder."
     exit 1
 fi
