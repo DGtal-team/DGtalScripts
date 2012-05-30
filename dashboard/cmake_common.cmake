@@ -62,10 +62,10 @@ set(dashboard_user_home "$ENV{HOME}")
 
 # Select the top dashboard directory.
 if(NOT DEFINED dashboard_root_name)
-  set(dashboard_root_name "My Tests")
+  set(dashboard_root_name "/Volumes/")
 endif()
 if(NOT DEFINED CTEST_DASHBOARD_ROOT)
-  get_filename_component(CTEST_DASHBOARD_ROOT "${CTEST_SCRIPT_DIRECTORY}/../${dashboard_root_name}" ABSOLUTE)
+  get_filename_component(CTEST_DASHBOARD_ROOT "${dashboard_root_name}" ABSOLUTE)
 endif()
 
 # Select the model (Nightly, Experimental, Continuous).

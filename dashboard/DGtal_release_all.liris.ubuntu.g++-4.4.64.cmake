@@ -14,7 +14,7 @@ SET(dashboard_do_coverage false)
 SET(dashboard_do_memcheck true)
 set(dashboard_git_url "git://github.com/DGtal-team/DGtal.git")
 set(dashboard_git_branch master)
-set(dashboard_root_name   "dashboard/MyTests/DGtal/${CTEST_BUILD_NAME}")
+set(dashboard_root_name   "/Volumes/dashboard/MyTests/DGtal/${CTEST_BUILD_NAME}")
 
 
 SET(dashboard_cache "
