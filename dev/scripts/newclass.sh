@@ -3,7 +3,7 @@
 # Laboratory of Mathematics (CNRS, UMR 5807), University of Savoie, France
 
 if ! test -d "${DGtalScripts}"; then
-    echo "Environment variable DGtal is undefined."
+    echo "Environment variable DGtalScripts is undefined."
     exit 1
 fi
 SCRIPTS_DIR=${DGtalScripts}/dev/scripts
