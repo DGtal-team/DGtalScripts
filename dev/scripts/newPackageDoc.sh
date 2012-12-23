@@ -8,47 +8,52 @@ fi
 SCRIPTS_DIR=${DGtalScripts}/dev/scripts
 source ${SCRIPTS_DIR}/common.sh
 
-if test  \( "$#" != "1" \);
+
+
+if test  \( "$#" != "2" \);
 then 
-    echo "usage: $0 documentation_name" ;
-    echo "       - creates a doxygen package documentation skeleton file (.dox) in the doc folder."
+    echo "usage: $0 package_name subdir" ;
+    echo "       - creates a doxygen package documentation skeleton file in the appropriate doc folder."
+    echo "       - example: 'newPackageDoc.sh Graph graph/doc' will generate packageGraph.dox and "
+    echo "         packageGraphConcepts.dox in the src/DGtal/graph/doc folder."
     exit 1
 fi
 
-if test -w "${DGtal}/doc/$1Package.dox" ;
+
+if test -w "${DGtal}/src/DGtal/$2/package$1.dox" ;
 then
-    echo "File ${DGtal}/doc/$1Package.dox exists and is writable. Please remove it before." ;
+    echo "File ${DGtal}/src/DGtal/$2/package$1.dox exists and is writable. Please remove it before." ;
+    exit 2;
+fi
+if test -w "${DGtal}/src/DGtal/$2/package$1Concepts.dox" ;
+then
+    echo "File ${DGtal}/src/DGtal/$2/package$1Concepts.dox exists and is writable. Please remove it before." ;
     exit 2;
 fi
 
-echo "--- Creating files ${DGtal}/doc/$1Package.dox"
+echo "--- Creating files ${DGtal}/src/DGtal/$2/package$1.dox"
+echo "--- Creating files ${DGtal}/src/DGtal/$2/package$1Concepts.dox"
 
 ename="s@XXX@$1@g"
-#etoday='s/2000\/??\/??/'`date '+20%y\/%m\/%d'`'/g'
 etoday='s@2000/??/??@'"${today}"'@g'
 eauthor="s@AUTHOR@${author}@g"
 eemail="s/EMAIL/${email}/g"
 einstitution="s@INSTITUTION@${institution}@g"
 
 
-# MODELS_DIR=${DGtal}/dev/models
-# PROFILES_DIR=${DGtal}/dev/profiles
 
-# profile=`whoami`
-# author="${profile} (login)"
-# email="Unknown"
-# institution="Unknown"
-# if test -r "${PROFILES_DIR}/profiles.defs"; then
-#     author=${AUTHOR}
-#     email=${EMAIL}
-#     institution=${INSTITUTION}
-# fi
-
-if test ! -r "${MODELS_DIR}/XXXPackage.dox"; then
-    echo "Missing model XXXPackage.dox in ${MODELS_DIR}."
+if test ! -r "${MODELS_DIR}/packageXXXConcepts.dox"; then
+    echo "Missing model packageXXX.dox in ${MODELS_DIR}."
     exit 2
 fi
 
-cat "${MODELS_DIR}/XXXPackage.dox" | sed -e "${enspace}" -e "${esubdir}" -e "${ename}" -e "${etoday}" -e "${eauthor}" -e "${eemail}" -e "${einstitution}"  > "${DGtal}/doc/$1Package.dox"
+if test ! -r "${MODELS_DIR}/packageXXXConcepts.dox"; then
+    echo "Missing model packageXXX.dox in ${MODELS_DIR}."
+    exit 2
+fi
+
+cat "${MODELS_DIR}/packageXXX.dox" | sed -e "${enspace}" -e "${esubdir}" -e "${ename}" -e "${etoday}" -e "${eauthor}" -e "${eemail}" -e "${einstitution}"  > "${DGtal}/src/DGtal/$2/package$1.dox"
+
+cat "${MODELS_DIR}/packageXXXConcepts.dox" | sed -e "${enspace}" -e "${esubdir}" -e "${ename}" -e "${etoday}" -e "${eauthor}" -e "${eemail}" -e "${einstitution}"  > "${DGtal}/src/DGtal/$2/package$1Concepts.dox"
 
 echo "--> done."

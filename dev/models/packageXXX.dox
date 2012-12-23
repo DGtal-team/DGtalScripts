@@ -15,7 +15,7 @@
  **/
 
 /**
- * @file XXX.dox
+ * @file packageXXX.dox
  * @author AUTHOR (\c EMAIL )
  * INSTITUTION
  *
@@ -28,16 +28,16 @@
 
 /*
  * Useful to avoid writing DGtal:: in front of every class.
- * Do not forget to add an entry in src/DGtal/base/Config.h.in !
+ * Do not forget to add an entry in src/DGtal/base/doc/mainpage.dox
  */
 namespace DGtal {
 //----------------------------------------
 /*!
-@page XXXPackage  XXX package
+@page packageXXX  XXX package
 
-@author AUTHOR
-@author AUTHOR
-@author AUTHOR
+@managers AUTHOR AUTHORS2
+
+@since 0.XX
 
 @b LICENSE: LGPL
 
@@ -53,17 +53,10 @@ namespace DGtal {
 - \ref moduleXXX3
 
 @b Package @b Concepts @b Overview
-
-- XXXPackageConcepts
-
-@b Package @b Concepts @b Overview
- - \ref xxxPackageConcepts
-
+ - \ref packageXXXConcepts
 
 @b Related @b documentation @b pages
  - \ref PageRef
-
-
 
 */
 
