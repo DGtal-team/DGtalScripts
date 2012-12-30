@@ -5,6 +5,6 @@ if ! test -d "${DGtal}"; then
     exit 1
 fi
 
-rsync -azv --delete --delete-after ${DGtal}/doc/html/ dgtal@liris.cnrs.fr:/home/dgtal/public_html/doc/$1/
+rsync -azv --delete --delete-after ${DGtal}/build/html/ dgtal@liris.cnrs.fr:/home/dgtal/public_html/doc/$1/
 
 echo "--> done."
