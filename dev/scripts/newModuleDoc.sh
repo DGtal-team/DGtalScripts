@@ -11,7 +11,7 @@ source ${SCRIPTS_DIR}/common.sh
 
 
 if test  \( "$#" != "2" \);
-then 
+then
     echo "usage: $0 package_name subdir" ;
     echo "       - creates a doxygen module documentation skeleton file in the appropriate doc folder."
     echo "       - example: 'newPackageDoc.sh LinearGraph graph/doc' will generate moduleLinearGraph.dox"
@@ -40,6 +40,6 @@ if test ! -r "${MODELS_DIR}/moduleXXX.dox"; then
     exit 2
 fi
 
-echo 'cat "${MODELS_DIR}/moduleXXX.dox" | sed -e "${enspace}" -e "${esubdir}" -e "${ename}" -e "${etoday}" -e "${eauthor}" -e "${eemail}" -e "${einstitution}"  > "${DGtal}/src/DGtal/$2/module$1.dox"'
+cat "${MODELS_DIR}/moduleXXX.dox" | sed -e "${enspace}" -e "${esubdir}" -e "${ename}" -e "${etoday}" -e "${eauthor}" -e "${eemail}" -e "${einstitution}"  > "${DGtal}/src/DGtal/$2/module$1.dox"
 
 echo "--> done."
