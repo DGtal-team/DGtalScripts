@@ -30,3 +30,4 @@ dev
 
     
    
+[![Bitdeli Badge](https://d2weczhvl823v0.cloudfront.net/DGtal-team/dgtalscripts/trend.png)](https://bitdeli.com/free "Bitdeli Badge")
