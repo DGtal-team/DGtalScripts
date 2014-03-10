@@ -28,6 +28,4 @@ dev
 
    Then, you can add ${DGtalScripts$}/dev/scripts to your $PATH variable.
 
-    
-   
-[![Bitdeli Badge](https://d2weczhvl823v0.cloudfront.net/DGtal-team/dgtalscripts/trend.png)](https://bitdeli.com/free "Bitdeli Badge")
+     
