@@ -31,6 +31,7 @@
 #include <iostream>
 #include "YYY/base/Common.h"
 #include "ConfigTest.h"
+#include "DGtalCatch.h"
 #include "DGtal/helpers/StdDefs.h"
 ///////////////////////////////////////////////////////////////////////////////
 
@@ -40,40 +41,26 @@ using namespace DGtal;
 ///////////////////////////////////////////////////////////////////////////////
 // Functions for testing class XXX.
 ///////////////////////////////////////////////////////////////////////////////
-/**
- * Example of a test. To be completed.
- *
- */
-bool testXXX()
+
+TEST_CASE( "Testing XXX" )
 {
-  unsigned int nbok = 0;
-  unsigned int nb = 0;
   
-  trace.beginBlock ( "Testing block ..." );
-  nbok += true ? 1 : 0; 
-  nb++;
-  trace.info() << "(" << nbok << "/" << nb << ") "
-	       << "true == true" << std::endl;
-  trace.endBlock();
+  int a = 5;
+  int b = 3+2;
+  int c = a+1;
   
-  return nbok == nb;
+  SECTION("Testing feature ZZZ of XXX")
+    {
+      REQUIRE( (a == b) );
+      a=6;
+      REQUIRE( (a == c) );
+    }
+  
+  SECTION("Testing another feature of XXX")
+    {
+      REQUIRE( (a == 5) );
+    }
+
 }
 
-///////////////////////////////////////////////////////////////////////////////
-// Standard services - public :
-
-int main( int argc, char** argv )
-{
-  trace.beginBlock ( "Testing class XXX" );
-  trace.info() << "Args:";
-  for ( int i = 0; i < argc; ++i )
-    trace.info() << " " << argv[ i ];
-  trace.info() << endl;
-
-  bool res = testXXX(); // && ... other tests
-  trace.emphase() << ( res ? "Passed." : "Error." ) << endl;
-  trace.endBlock();
-  return res ? 0 : 1;
-}
-//                                                                           //
-///////////////////////////////////////////////////////////////////////////////
+/** @ingroup Tests **/
