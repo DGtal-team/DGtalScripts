@@ -40,7 +40,7 @@ fi
 TOOLS_DIR=""
 if ! $CONTRIB;
 then
-  if ! test -d "${DGtalTools}" 
+  if ! test -d "${DGtalTools}";
       then
          echo "Environment variable DGtalTools is undefined."
          exit 1
@@ -49,7 +49,7 @@ then
         TOOLS_PROJ_NAME="DGtalTools"
   fi 
 else
-  if ! test -d "${DGtalToolsContrib}" 
+  if ! test -d "${DGtalToolsContrib}";
       then
          echo "Environment variable DGtalToolsContrib is undefined."
          exit 1
