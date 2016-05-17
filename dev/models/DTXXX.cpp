@@ -96,9 +96,9 @@ int main( int argc, char** argv )
   if( !parseOK || vm.count("help")||argc<=1)
     {
       std::cout << "Usage: " << argv[0] << " [input]\n"
-                << "The tools description with typical use example... "
+                << "The tools description... \n"
                 << general_opt << "\n"
-                << "Example of use:\n \t  ... \n";
+                << "Typical use example:\n \t XXX -i ... \n";
       return 0;
     }  
   if(! vm.count("input"))
