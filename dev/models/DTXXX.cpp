@@ -36,10 +36,37 @@
 ///////////////////////////////////////////////////////////////////////////////
 using namespace std;
 using namespace DGtal;
-
 ///////////////////////////////////////////////////////////////////////////////
 namespace po = boost::program_options;
 
+
+/**
+ @page XXX XXX
+ 
+ @brief  Description of the tool...
+
+ @b Usage:   XXX [input]
+
+ @b Allowed @b options @b are :
+ 
+ @code
+  -h [ --help ]           display this message
+  -i [ --input ] arg      an input file... 
+  -p [ --parameter] arg   a double parameter...
+ @endcode
+
+ @b Example: 
+
+ @code
+   	XXX -i  $DGtal/examples/samples/....
+ @endcode
+
+ @image html resXXX.png "Example of result. "
+
+ @see
+ @ref XXX.cpp
+
+ */
 
 
 int main( int argc, char** argv )
@@ -70,7 +97,8 @@ int main( int argc, char** argv )
     {
       std::cout << "Usage: " << argv[0] << " [input]\n"
                 << "The tools description with typical use example... "
-                << general_opt << "\n";
+                << general_opt << "\n"
+                << "Example of use:\n \t  ... \n";
       return 0;
     }  
   if(! vm.count("input"))
