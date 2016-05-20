@@ -18,7 +18,7 @@
 #pragma GCC diagnostic ignored "-Wunused-parameter"
 
 /**
- * @file XXX.h
+ * @file
  * @author AUTHOR (\c EMAIL )
  * INSTITUTION
  *

@@ -17,7 +17,7 @@
 #pragma once
 
 /**
- * @file XXX.h
+ * @file
  * @author AUTHOR (\c EMAIL )
  * INSTITUTION
  *

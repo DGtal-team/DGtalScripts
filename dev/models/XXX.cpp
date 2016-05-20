@@ -15,7 +15,7 @@
  **/
 
 /**
- * @file XXX.cpp
+ * @file
  * @author AUTHOR (\c EMAIL )
  * INSTITUTION
  *
