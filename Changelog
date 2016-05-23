@@ -1,3 +1,7 @@
+# 0.3
+
+  * Updating class models to match C++11 new special members.
+
 # 0.2
 
   * Support for Markdown syntax for doxygen > 1.8.0 in modesl
