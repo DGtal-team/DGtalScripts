@@ -29,6 +29,7 @@
 
 ///////////////////////////////////////////////////////////////////////////////
 #include "DGtal/base/Common.h"
+#include "DGtal/helpers/StdDefs.h"
 
 #include <boost/program_options/options_description.hpp>
 #include <boost/program_options/parsers.hpp>
