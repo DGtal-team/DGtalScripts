@@ -1,0 +1,27 @@
+dgtal (0.9.4.1-0) stable; urgency=low
+
+  * Update to 0.9.4.1
+  
+ -- Kacper Pluta <kacper.pluta@esiee.fr>  Fri, 06 Apr 2018 10:12:38 +0100
+
+dgtal (0.9.3-0) stable; urgency=low
+
+  * Update to 0.9.3
+  
+ -- Kacper Pluta <kacper.pluta@esiee.fr>  Tue, 24 Jan 2017 10:04:38 +0100
+
+dgtal (0.9.1-0) stable; urgency=low
+
+  * Rename packages
+
+ -- Kacper Pluta <kacper.pluta@esiee.fr>  Sun, 24 Jan 2016 17:16:38 +0100
+
+  * Update to 0.9.1
+
+ -- Kacper Pluta <kacper.pluta@esiee.fr>  Tue, 12 Jan 2016 09:16:38 +0100
+
+dgtal (0.9-0) stable; urgency=low
+  * Initial Release
+
+ -- Kacper Pluta <kacper.pluta@esiee.fr>  Fri, 05 Nov 2015 10:50:38 +0100
+
