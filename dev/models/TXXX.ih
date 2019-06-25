@@ -15,7 +15,7 @@
  **/
 
 /**
- * @file XXX.ih
+ * @file
  * @author AUTHOR (\c EMAIL )
  * INSTITUTION
  *
@@ -38,14 +38,6 @@
 ///////////////////////////////////////////////////////////////////////////////
 // ----------------------- Standard services ------------------------------
 
-/**
- * Destructor.
- */
-template <typename T>
-inline
-YYY::XXX<T>::~XXX()
-{
-}
 
 ///////////////////////////////////////////////////////////////////////////////
 // Interface - public :
@@ -82,8 +74,8 @@ YYY::XXX<T>::isValid() const
 template <typename T>
 inline
 std::ostream&
-YYY::operator<< ( std::ostream & out, 
-		  const XXX<T> & object )
+YYY::operator<< ( std::ostream & out,
+                  const XXX<T> & object )
 {
   object.selfDisplay( out );
   return out;

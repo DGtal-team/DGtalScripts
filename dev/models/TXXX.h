@@ -17,7 +17,7 @@
 #pragma once
 
 /**
- * @file XXX.h
+ * @file
  * @author AUTHOR (\c EMAIL )
  * INSTITUTION
  *
@@ -59,10 +59,47 @@ namespace YYY
     // ----------------------- Standard services ------------------------------
   public:
 
+    /* TODO: The following special members are currently deleted.
+     * TODO: Replace `= delete` by `= default` if you want to use the compiler-
+     * TODO: generated version of the operation, or implement your own version
+     * TODO: in XXX.ih.
+     */
+
+    /**
+     * Default constructor.
+     */
+    XXX() = delete;
+
     /**
      * Destructor.
      */
-    ~XXX();
+    ~XXX() = delete;
+
+    /**
+     * Copy constructor.
+     * @param other the object to clone.
+     */
+    XXX ( const XXX & other ) = delete;
+
+    /**
+     * Move constructor.
+     * @param other the object to move.
+     */
+    XXX ( XXX && other ) = delete;
+
+    /**
+     * Copy assignment operator.
+     * @param other the object to copy.
+     * @return a reference on 'this'.
+     */
+    XXX & operator= ( const XXX & other ) = delete;
+
+    /**
+     * Move assignment operator.
+     * @param other the object to move.
+     * @return a reference on 'this'.
+     */
+    XXX & operator= ( XXX && other ) = delete;
 
     // ----------------------- Interface --------------------------------------
   public:
@@ -80,35 +117,13 @@ namespace YYY
     bool isValid() const;
 
     // ------------------------- Protected Datas ------------------------------
-  private:
+  protected:
+
     // ------------------------- Private Datas --------------------------------
   private:
 
     // ------------------------- Hidden services ------------------------------
   protected:
-
-    /**
-     * Constructor.
-     * Forbidden by default (protected to avoid g++ warnings).
-     */
-    XXX();
-
-  private:
-
-    /**
-     * Copy constructor.
-     * @param other the object to clone.
-     * Forbidden by default.
-     */
-    XXX ( const XXX & other );
-
-    /**
-     * Assignment.
-     * @param other the object to copy.
-     * @return a reference on 'this'.
-     * Forbidden by default.
-     */
-    XXX & operator= ( const XXX & other );
 
     // ------------------------- Internals ------------------------------------
   private:
