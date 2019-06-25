@@ -54,29 +54,29 @@ Description of \b concept '\b XXX' <p>
 @ingroup Concepts
 @brief Aim:
 
-### Refinement of
+# Refinement of
 
-### Associated types :
+# Associated types 
 
-### Notation
+# Notation
  - \e X : A type that is a model of XXX
  - \e x, \e y : object of type X
 
-### Definitions
+# Definitions
 
-### Valid expressions and semantics
+# Valid expressions and semantics
 
 | Name  | Expression | Type requirements | Return type   | Precondition | Semantics | Post condition | Complexity |
 |-------|------------|-------------------|---------------|--------------|-----------|----------------|------------|
 |       |            |                   |               |              |           |                |            |
 
-### Invariants
+# Invariants
 
-### Models
+# Models
 
    A dummy model (for concept checking) is CXXXArchetype.
 
-### Notes
+# Notes
 
 @tparam T the type that should be a model of XXX.
  */
