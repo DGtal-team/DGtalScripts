@@ -31,14 +31,12 @@
 #include "DGtal/base/Common.h"
 #include "DGtal/helpers/StdDefs.h"
 
-#include <boost/program_options/options_description.hpp>
-#include <boost/program_options/parsers.hpp>
-#include <boost/program_options/variables_map.hpp>
+#include "CLI11.hpp"
+
 ///////////////////////////////////////////////////////////////////////////////
 using namespace std;
 using namespace DGtal;
 ///////////////////////////////////////////////////////////////////////////////
-namespace po = boost::program_options;
 
 
 /**
@@ -52,14 +50,14 @@ namespace po = boost::program_options;
  
  @code
   -h [ --help ]           display this message
-  -i [ --input ] arg      an input file... 
+  -i [ --input ] arg      an input file...
   -p [ --parameter] arg   a double parameter...
  @endcode
 
- @b Example: 
+ @b Example:
 
  @code
-   	XXX -i  $DGtal/examples/samples/....
+     XXX -i  $DGtal/examples/samples/....
  @endcode
 
  @image html resXXX.png "Example of result. "
@@ -72,56 +70,34 @@ namespace po = boost::program_options;
 
 int main( int argc, char** argv )
 {
-  // parse command line -------------------------------------------------------
-  po::options_description general_opt("Allowed options are");
-  general_opt.add_options()
-    ("help,h", "display this message")
-    ("input,i", po::value<std::string >(), "an input file... " )
-    ("parameter,p", po::value<double>()->default_value(1.0), "a double parameter... " );
 
-  bool parseOK=true;
-  po::variables_map vm;
-  try
-    {
-      po::store(po::parse_command_line(argc, argv, general_opt), vm);
-    }
-  catch(const std::exception& ex)
-    {
-      parseOK=false;
-      trace.info()<< "Error checking program options: "<< ex.what()<< endl;
-    }
-  
+  double parameter {1.0};
+  std::string inputFileName;
+  std::string outputFileName;
+  std::stringstream usage;
+  usage << "Usage: " << argv[0] << " [input]\n"
+        << "Typical use example:\n \t XXX -i ... \n";
+  // parse command line using CLI-------------------------------------------------------
+  CLI::App app;
+  app.description("Your program description.\n" + usage.str() );
+  app.add_option("--input,-i,1", inputFileName, "Input file")->required()->check(CLI::ExistingFile);
+  app.add_option("--output,-o,2", outputFileName, "Output SDP filename")->required();
+  app.add_option("--parameter,-p", parameter, "a double parameter", true);
 
-  // check if min arguments are given and tools description ------------------
-  po::notify(vm);
-  if( !parseOK || vm.count("help")||argc<=1)
-    {
-      std::cout << "Usage: " << argv[0] << " [input]\n"
-                << "The tools description... \n"
-                << general_opt << "\n"
-                << "Typical use example:\n \t XXX -i ... \n";
-      return 0;
-    }  
-  if(! vm.count("input"))
-    {
-      trace.error() << " The file name was not defined" << endl;
-      return 1;
-    }
+  app.get_formatter()->column_width(40);
+  CLI11_PARSE(app, argc, argv);
+  // END parse command line using CLI ----------------------------------------------
 
-
-
-  //  recover the  args ----------------------------------------------------
-  string inputFileName = vm["input"].as<string>();
-  double parameter =  vm["parameter"].as<double>();
-
-  
   
   // Some nice processing  --------------------------------------------------
   
   
-
+ trace.info() << "Starting " << argv[0]  << "with input: " <<  inputFileName
+              << " and output :" << outputFileName
+              << " param: " << parameter <<std::endl;
   
 
   return 0;
 }
+
 
