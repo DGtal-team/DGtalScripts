@@ -1,0 +1,47 @@
+# Maintainer: Kacper Pluta <kacper.pluta@esiee.fr>
+
+pkgname=libDGtal
+pkgver=0.9.4.1
+_majorver=0.9
+pkgrel=1
+pkgdesc='Digital Geometry Tools and Algorithms.'
+arch=('x86_64')
+url='http://www.dgtal.org/'
+license=('LGPLv3')
+depends=('boost-libs' 'eigen' 'gmp' 'zlib')
+makedepends=('boost' 'cmake' 'eigen' 'gmp' 'zlib' 'rhash')
+
+#source=(https://github.com/DGtal-team/DGtal/archive/v${pkgver}.tar.gz)
+source=(DGtal-${pkgver}.tar.gz)
+sha1sums=('4b7778f69812d8559325d83805c51803d07aa96c')
+
+
+build() {
+  cd "${srcdir}/DGtal-${pkgver}"
+  rm -rf build
+  mkdir build
+  cd build
+
+  cmake .. \
+    -DCMAKE_CXX_COMPILER:string=g++ \
+    -DCMAKE_C_COMPILER:string=gcc \
+    -DCMAKE_INSTALL_PREFIX:path="${pkgdir}/usr" \
+    -DBUILD_EXAMPLES:BOOL=OFF \
+    -DBUILD_SHARED_LIBS:BOOL=ON \
+    -DBUILD_TESTING:BOOL=OFF \
+    -DWITH_EIGEN:string=true \
+    -DWITH_GMP:string=true \
+    -DCMAKE_BUILD_TYPE=Release
+
+  make
+}
+
+package() {
+  cd "${srcdir}/DGtal-${pkgver}/build"
+
+  make DESTDIR="${pkgdir}" install
+
+# Install license
+  install -dv "${pkgdir}/usr/share/licenses/DGtal"
+  install -m644 "${srcdir}/DGtal-${pkgver}/LICENSE" "${pkgdir}/usr/share/licenses/DGtal"
+}

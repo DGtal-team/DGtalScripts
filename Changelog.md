@@ -1,3 +1,7 @@
+# 0.4
+
+   * Scripts for building Linux packages.
+
 # 0.3
 
   * Updating class models to match C++11 new special members.
