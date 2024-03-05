@@ -1,0 +1,20 @@
+Source: dgtal
+Priority: optional
+Section: libs
+Maintainer: Kacper Pluta  <kacper.pluta@esiee.fr>
+Build-Depends: dpkg (>= 1.13.2), debhelper (>= 4.0), cmake (>= 3), libboost-all-dev (>= 1.46.0), libeigen3-dev (>= 3.2.1), libqglviewer-dev-qt4, libqglviewer-headers, libgmp-dev, zlib1g-dev
+Standards-Version: 3.9.1
+
+Package: dgtal
+Architecture: any
+Section: libs
+Depends: libgmp10, libqglviewer2-qt4, libgmpxx4ldbl, zlib
+Description: Digital Geometry Tools and Algorithms.  
+
+Package: dgtal-dev
+Architecture: any
+Section: devel
+Depends: libeigen3-dev (>= 3.2.1)
+Description: Digital Geometry Tools and Algorithms.  
+
+
