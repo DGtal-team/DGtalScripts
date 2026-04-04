@@ -82,7 +82,7 @@ int main( int argc, char** argv )
   app.description("Your program description.\n" + usage.str() );
   app.add_option("--input,-i,1", inputFileName, "Input file")->required()->check(CLI::ExistingFile);
   app.add_option("--output,-o,2", outputFileName, "Output SDP filename")->required();
-  app.add_option("--parameter,-p", parameter, "a double parameter", true);
+  app.add_option("--parameter,-p", parameter, "a double parameter");
 
   app.get_formatter()->column_width(40);
   CLI11_PARSE(app, argc, argv);
